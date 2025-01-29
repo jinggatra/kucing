@@ -12,11 +12,11 @@ class CatDataProvider {
       {
         'image': 'assets/images/ekspresi/cat2.png',
         'name': 'Oyen 2',
-        'kode': 'Chill',
+        'kode': 'Santai',
         'description': 'Kucing yang suka tidur di kasur.',
       },
       {
-        'image': 'assets/images/ekspresi/cat3.png',
+        'image': 'assets/images/ekspresi/cat3.jpg',
         'name': 'Oyen 3',
         'kode': 'Capek',
         'description': 'Kucing capek melihat majikan.',

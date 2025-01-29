@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image:
-                AssetImage('assets/images/bg2.jpg'), // Ganti dengan aset Anda
+                AssetImage('assets/images/bg3.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -22,8 +22,9 @@ class SplashScreen extends StatelessWidget {
           children: [
             // Nama Aplikasi atau Logo Utama
             Text(
-              'Edukasi Oyen RW 12 Cisalak',
+              'E-Oyen RW 12 Cisalak',
               style: TextStyle(
+                fontFamily: 'Bold Condensed',
                 fontSize: AppConstants.titleFontSize,
                 color: AppConstants.textColor,
               ),
@@ -35,13 +36,13 @@ class SplashScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/logo.png', // Ganti dengan aset Anda
+                  'assets/images/logo.png', 
                   width: 100,
                   height: 100,
                 ),
                 SizedBox(width: 20), // Jarak antar logo
                 Image.asset(
-                  'assets/images/logo2.png', // Ganti dengan aset Anda
+                  'assets/images/logo2.png', 
                   width: 100,
                   height: 100,
                 ),

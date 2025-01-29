@@ -27,12 +27,22 @@ flutter_icons:
 
 flutter:
   uses-material-design: true
-
+  fonts:
+    - family: Bold Condensed
+      fonts:
+        - asset: assets/fonts/Roboto-BoldCondensed.ttf
+    - family: Regular
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+    - family: Light
+      fonts:
+        - asset: assets/fonts/Roboto-Light.ttf
   # Enable generation of localized Strings from arb files.
   generate: true
 
   assets:
     # Add assets from the images directory to the application.
+    - assets/fonts/
     - assets/images/
     - assets/images/ekspresi/
     - assets/images/doDont/
