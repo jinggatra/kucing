@@ -53,8 +53,8 @@ class DoDontProvider {
       {
         'image': 'assets/images/doDont/dont2.png',
         'name': 'Dont',
-        'kode': 'Dont',
-        'category': 'Berteriak',
+        'kode': 'Berteriak',
+        'category': 'Do & Dont',
         'description': 'Jangan teriak atau bersuara keras ke kucing.',
       },
       // Tambahkan data lainnya sesuai kebutuhan
