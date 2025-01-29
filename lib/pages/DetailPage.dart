@@ -19,10 +19,9 @@ class DetailPage extends StatelessWidget {
         backgroundColor: Colors.purple.shade600,
       ),
       backgroundColor: Colors.orangeAccent.shade700,
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             // Gambar
             Image.asset(

@@ -50,7 +50,7 @@ class _QuizPageState extends State<QuizPage> {
 
   void _checkAnswer(String selectedAnswer) {
     setState(() {
-      isAnswerCorrect = selectedAnswer == currentQuestion['name'];
+      isAnswerCorrect = selectedAnswer == currentQuestion['kode'];
     });
 
     // Tunggu sejenak sebelum mengganti pertanyaan
@@ -110,11 +110,11 @@ class _QuizPageState extends State<QuizPage> {
                     spacing: 10,
                     children: data.map((item) {
                       return ElevatedButton(
-                        onPressed: () => _checkAnswer(item['name']!),
+                        onPressed: () => _checkAnswer(item['kode']!),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.purple.shade400,
                         ),
-                        child: Text(item['name']!, 
+                        child: Text(item['kode']!, 
                         style: TextStyle(fontSize: 18, color: Colors.white)),
                       );
                     }).toList(),
