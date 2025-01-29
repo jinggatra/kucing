@@ -7,7 +7,7 @@ class AppConstants {
   static const Color textColor = Colors.black;
 
   // Ukuran teks
-  static const double titleFontSize = 28.0;
+  static const double titleFontSize = 50;
   static const double buttonFontSize = 18.0;
 
   // Padding standar
