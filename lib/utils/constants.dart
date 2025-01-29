@@ -4,7 +4,7 @@ class AppConstants {
   // Warna tema utama
   static const Color primaryColor = Colors.purple;
   static const Color secondaryColor = Colors.white;
-  static const Color textColor = Colors.black;
+  static const Color textColor = Colors.white;
 
   // Ukuran teks
   static const double titleFontSize = 50;

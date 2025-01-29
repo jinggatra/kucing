@@ -28,8 +28,8 @@ class _ImageSelectionPageState extends State<ImageSelectionPage> {
       case 'Ekspresi':
         _data = CatDataProvider.getCatData();
         break;
-      case 'Do & Dont':
-        _data = DoDontProvider.getDoDontData();
+      case 'Petunjuk':
+        _data = PetunjukProvider.getPetunjukData();
         break;
       case 'Makanan & Minuman':
         _data = FnBProvider.getFnBData();

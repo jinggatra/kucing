@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kucing/pages/ImagePage.dart';
+import 'package:stroke_text/stroke_text.dart';
+import 'package:kucing/utils/constants.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -14,9 +16,21 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            StrokeText(
+              text: 'MATERI',
+              textStyle: TextStyle(
+                fontFamily: 'Bold Condensed',
+                fontSize: 65,
+                color: AppConstants.textColor,
+              ),
+              strokeColor: Colors.black,
+              strokeWidth: 2,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
             _buildButton(context, 'Ekspresi', 'Ekspresi'),
             SizedBox(height: 20),
-            _buildButton(context, 'Do & Dont', 'Do & Dont'),
+            _buildButton(context, 'Petunjuk', 'Petunjuk'),
             SizedBox(height: 20),
             _buildButton(context, 'Makanan & Minuman', 'Makanan & Minuman'),
           ],

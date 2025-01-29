@@ -28,8 +28,8 @@ class _QuizPageState extends State<QuizPage> {
       case 'Ekspresi':
         data = CatDataProvider.getCatData();
         break;
-      case 'Do & Dont':
-        data = DoDontProvider.getDoDontData();
+      case 'Petunjuk':
+        data = PetunjukProvider.getPetunjukData();
         break;
       case 'Makanan & Minuman':
         data = FnBProvider.getFnBData();
