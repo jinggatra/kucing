@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
         title: Text('Home Screen'),
         backgroundColor: Colors.purple.shade600,
       ),
+      backgroundColor: Colors.orangeAccent.shade700,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

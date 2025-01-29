@@ -68,6 +68,7 @@ class _QuizPageState extends State<QuizPage> {
         title: Text('Quiz: ${widget.category}'),
         backgroundColor: Colors.purple.shade600,
       ),
+      backgroundColor: Colors.orangeAccent.shade700,
       body: data.isEmpty
           ? Center(
               child: Text(
@@ -113,7 +114,8 @@ class _QuizPageState extends State<QuizPage> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.purple.shade400,
                         ),
-                        child: Text(item['name']!),
+                        child: Text(item['name']!, 
+                        style: TextStyle(fontSize: 18, color: Colors.white)),
                       );
                     }).toList(),
                   ),

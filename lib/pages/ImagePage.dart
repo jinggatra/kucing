@@ -7,7 +7,8 @@ import 'DetailPage.dart';
 class ImageSelectionPage extends StatefulWidget {
   final String category;
 
-  const ImageSelectionPage({required this.category, Key? key}) : super(key: key);
+  const ImageSelectionPage({required this.category, Key? key})
+      : super(key: key);
 
   @override
   _ImageSelectionPageState createState() => _ImageSelectionPageState();
@@ -46,6 +47,7 @@ class _ImageSelectionPageState extends State<ImageSelectionPage> {
         title: Text('Kategori: ${widget.category}'),
         backgroundColor: Colors.purple.shade600,
       ),
+      backgroundColor: Colors.orangeAccent.shade700,
       body: _data.isEmpty
           ? Center(
               child: Text(
