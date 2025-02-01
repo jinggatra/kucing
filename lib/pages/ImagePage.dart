@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import '../logic/DataProvider.dart';
-// import '../widgets/ImageCard.dart';
-import 'QuizPage.dart';
 import 'DetailPage.dart';
 
 class ImageSelectionPage extends StatefulWidget {
@@ -114,20 +112,6 @@ class _ImageSelectionPageState extends State<ImageSelectionPage> {
                 );
               },
             ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => QuizPage(category: widget.category)),
-          );
-        },
-        backgroundColor: Colors.purple.shade600,
-        child: const Text(
-          'Mulai Kuis',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
     );
   }
 }
