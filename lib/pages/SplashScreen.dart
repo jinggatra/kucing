@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
           children: [
             // Nama Aplikasi atau Logo Utama
             StrokeText(
-              text: 'E-Oyen RW 12 Cisalak',
+              text: 'Edukasi Kucing Liar RW 12 Cisalak',
               textStyle: TextStyle(
                 fontFamily: 'Bold Condensed',
                 fontSize: AppConstants.titleFontSize,
