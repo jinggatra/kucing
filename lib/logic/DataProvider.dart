@@ -26,35 +26,35 @@ class CatDataProvider {
   }
 }
 
-class PetunjukProvider {
-  static List<Map<String, String>> getPetunjukData() {
+class DnDProvider {
+  static List<Map<String, String>> getDnDData() {
     return [
       {
         'image': 'assets/images/doDont/do1.png',
         'name': 'Mengelus',
         'kode': 'Do',
-        'category': 'Petunjuk',
+        'category': 'Do & Dont',
         'description': 'Mengelus dapat memberikan kenyamanan dan kesehatan mental pada kucing.',
       },
       {
         'image': 'assets/images/doDont/do2.png',
         'name': 'Memberi Makan',
         'kode': 'Do',
-        'category': 'Petunjuk',
+        'category': 'Do & Dont',
         'description': 'Memberi makan kucing dapat memberikan kenyamanan dan kesehatan fisik pada kucing.',
       },
       {
         'image': 'assets/images/doDont/dont1.png',
         'name': 'Kekerasan',
         'kode': 'Dont',
-        'category': 'Petunjuk',
+        'category': 'Do & Dont',
         'description': 'Jangan kekerasan kepada kucing. Kucing merupakan sesama makhluk hidup yang sama-sama merasakan sakit. Jangan memukul atau menendang kucing ya adik-adik.',
       },
       {
         'image': 'assets/images/doDont/dont2.png',
         'name': 'Teriak',
         'kode': 'Dont',
-        'category': 'Petunjuk',
+        'category': 'Do & Dont',
         'description': 'Jangan teriak atau bersuara keras ke kucing. Kucing adalah makhluk hidup yang sensitif terhadap suara, jadi mereka memiliki pendengaran yang berbeda dengan kita manusia. Jangan sembarangan teriak ataupun memberikan suara kencang ke kucing ya adik-adik!',
       },
       // Tambahkan data lainnya sesuai kebutuhan

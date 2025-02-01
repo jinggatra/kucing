@@ -27,7 +27,7 @@ class _ImageSelectionPageState extends State<ImageSelectionPage> {
         _data = CatDataProvider.getCatData();
         break;
       case 'Petunjuk':
-        _data = PetunjukProvider.getPetunjukData();
+        _data = DnDProvider.getDnDData();
         break;
       case 'Makanan & Minuman':
         _data = FnBProvider.getFnBData();

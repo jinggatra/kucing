@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20),
             _buildButton(context, 'Ekspresi', 'Ekspresi'),
             SizedBox(height: 20),
-            _buildButton(context, 'Petunjuk', 'Petunjuk'),
+            _buildButton(context, 'Do & Dont', 'Do & Dont'),
             SizedBox(height: 20),
             _buildButton(context, 'Makanan & Minuman', 'Makanan & Minuman'),
           ],
