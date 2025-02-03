@@ -29,7 +29,7 @@ class _QuizPageState extends State<QuizPage> {
         data = CatDataProvider.getCatData();
         break;
       case 'Petunjuk':
-        data = PetunjukProvider.getPetunjukData();
+        data = DnDProvider.getDnDData();
         break;
       case 'Makanan & Minuman':
         data = FnBProvider.getFnBData();

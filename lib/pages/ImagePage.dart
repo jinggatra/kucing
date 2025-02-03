@@ -26,11 +26,17 @@ class _ImageSelectionPageState extends State<ImageSelectionPage> {
       case 'Ekspresi':
         _data = CatDataProvider.getCatData();
         break;
-      case 'Petunjuk':
-        _data = PetunjukProvider.getPetunjukData();
+      case 'Do':
+        _data = DoProvider.getDoData();
         break;
-      case 'Makanan & Minuman':
-        _data = FnBProvider.getFnBData();
+      case 'Dont':
+        _data = DontProvider.getDontData();
+        break;
+      case 'Makanan':
+        _data = FoodProvider.getFoodData();
+        break;
+      case 'Minuman':
+        _data = WaterProvider.getWaterData();
         break;
       default:
         _data = [];

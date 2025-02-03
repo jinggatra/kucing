@@ -26,8 +26,8 @@ class CatDataProvider {
   }
 }
 
-class PetunjukProvider {
-  static List<Map<String, String>> getPetunjukData() {
+class DoProvider {
+  static List<Map<String, String>> getDoData() {
     return [
       {
         'image': 'assets/images/doDont/do1.png',
@@ -43,47 +43,62 @@ class PetunjukProvider {
         'category': 'Petunjuk',
         'description': 'Memberi makan kucing dapat memberikan kenyamanan dan kesehatan fisik pada kucing.',
       },
+      // Tambahkan data lainnya sesuai kebutuhan
+    ];
+  }
+}
+
+class DontProvider {
+  static List<Map<String, String>> getDontData() {
+    return [
       {
         'image': 'assets/images/doDont/dont1.png',
         'name': 'Kekerasan',
         'kode': 'Dont',
-        'category': 'Petunjuk',
+        'category': 'Dont',
         'description': 'Jangan kekerasan kepada kucing. Kucing merupakan sesama makhluk hidup yang sama-sama merasakan sakit. Jangan memukul atau menendang kucing ya adik-adik.',
       },
       {
         'image': 'assets/images/doDont/dont2.png',
         'name': 'Teriak',
         'kode': 'Dont',
-        'category': 'Petunjuk',
+        'category': 'Dont',
         'description': 'Jangan teriak atau bersuara keras ke kucing. Kucing adalah makhluk hidup yang sensitif terhadap suara, jadi mereka memiliki pendengaran yang berbeda dengan kita manusia. Jangan sembarangan teriak ataupun memberikan suara kencang ke kucing ya adik-adik!',
       },
-      // Tambahkan data lainnya sesuai kebutuhan
     ];
   }
 }
 
-class FnBProvider {
-  static List<Map<String, String>> getFnBData() {
+class FoodProvider {
+  static List<Map<String, String>> getFoodData() {
     return [
       {
         'image': 'assets/images/fnb/food1.png',
         'name': 'Cat food',
         'kode': 'Cat food',
-        'category': 'Makanan & Minuman',
+        'category': 'Makanan',
         'description': 'Makanan khusus yang diproduksi untuk kucing baik itu kering (Dry food) ataupun basah (Wet food). Sebaiknya disimpan dalam keadaan tertutup.',
       },
       {
         'image': 'assets/images/fnb/food2.png',
         'name': 'Daging segar',
         'kode': 'Daging segar',
-        'category': 'Makanan & Minuman',
+        'category': 'Makanan',
         'description': 'Daging segar memiliki protein yang baik dan memberikan terapi rahang dan membersihkan gigi untuk kucing. Daging yang cocok untuk kucing adalah daging ikan ataupun ayam, bisa diberikan yang mentah ataupun yang sudah dimasak sedikit.',
       },
+      // Tambahkan data lainnya sesuai kebutuhan
+    ];
+  }
+}
+
+class WaterProvider {
+  static List<Map<String, String>> getWaterData() {
+    return [
       {
         'image': 'assets/images/fnb/food3.png',
         'name': 'Air Minum',
         'kode': 'Air Minum',
-        'category': 'Makanan & Minuman',
+        'category': 'Minuman',
         'description': 'Air merupakan satu-satunya minuman yang cocok untuk kucing karena air yang steril cocok untuk pencernaan kucing. Susu merupakan produk yang tidak cocok untuk kucing karena dapat menyebabkan sakit perut untuk kucing.',
       },
       // Tambahkan data lainnya sesuai kebutuhan

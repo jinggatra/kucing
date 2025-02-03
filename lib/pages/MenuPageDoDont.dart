@@ -3,7 +3,7 @@ import 'package:kucing/pages/ImagePage.dart';
 import 'package:stroke_text/stroke_text.dart';
 import 'package:kucing/utils/constants.dart';
 
-class HomeScreen extends StatelessWidget {
+class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,22 +17,11 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             StrokeText(
-              text: 'MATERI',
-              textStyle: TextStyle(
-                fontFamily: 'Bold Condensed',
-                fontSize: 65,
-                color: AppConstants.textColor,
-              ),
-              strokeColor: Colors.black,
-              strokeWidth: 2,
-              textAlign: TextAlign.center,
-            ),
+             _buildButton(context, 'Ekspresi', 'Ekspresi'),
             SizedBox(height: 20),
-            _buildButton(context, 'Ekspresi', 'Ekspresi'),
+            _buildButton(context, 'Do & Dont', 'DoDontMenu'),
             SizedBox(height: 20),
-            _buildButton(context, 'Do & Dont', 'Do & Dont'),
-            SizedBox(height: 20),
-            _buildButton(context, 'Makanan & Minuman', 'Makanan & Minuman'),
+            _buildButton(context, 'Makanan & Minuman', 'FoodDrinkMenu'),
           ],
         ),
       ),
@@ -42,12 +31,17 @@ class HomeScreen extends StatelessWidget {
   Widget _buildButton(BuildContext context, String title, String category) {
     return ElevatedButton(
       onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ImageSelectionPage(category: category),
-          ),
-        );
+        if (title == 'Do') {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => MenuPage(category: category)));
+        } else {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ImageSelectionPage(category: category),
+            ),
+          );
+        }
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.purple.shade400,
