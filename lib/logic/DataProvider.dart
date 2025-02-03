@@ -135,14 +135,14 @@ class DoProvider {
         'image': 'assets/images/doDont/do1.png',
         'name': 'Mengelus',
         'kode': 'Do',
-        'category': 'Petunjuk',
+        'category': 'Do & Dont',
         'description': 'Mengelus dapat memberikan kenyamanan dan kesehatan mental pada kucing.',
       },
       {
         'image': 'assets/images/doDont/do2.png',
         'name': 'Memberi Makan',
         'kode': 'Do',
-        'category': 'Petunjuk',
+        'category': 'Do & Dont',
         'description': 'Memberi makan kucing dapat memberikan kenyamanan dan kesehatan fisik pada kucing.',
       },
       // Tambahkan data lainnya sesuai kebutuhan
