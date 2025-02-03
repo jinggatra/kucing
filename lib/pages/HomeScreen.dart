@@ -5,7 +5,6 @@ import 'package:kucing/utils/constants.dart';
 import 'package:kucing/widgets/CustomButton.dart';
 import 'package:kucing/logic/Navigation.dart';
 
-
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -63,11 +62,19 @@ class HomeScreen extends StatelessWidget {
         );
       },
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.purple.shade400,
+        backgroundColor: AppConstants.secondaryColor,
+        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
       ),
       child: Text(
         title,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(
+          fontSize: AppConstants.buttonFontSize,
+          color: AppConstants.primaryColor,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
