@@ -3,12 +3,12 @@ import 'package:kucing/pages/ImagePage.dart';
 import 'package:stroke_text/stroke_text.dart';
 import 'package:kucing/utils/constants.dart';
 
-class DoDontPage extends StatelessWidget {
+class FnBPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: Text('Menu Page'),
         backgroundColor: Colors.purple.shade600,
       ),
       backgroundColor: Colors.orangeAccent.shade700,
@@ -28,9 +28,9 @@ class DoDontPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
-            _buildButton(context, 'Do', 'Do'),
+            _buildButton(context, 'Makanan', 'Makanan'),
             SizedBox(height: 20),
-            _buildButton(context, 'Dont', 'Dont'),
+            _buildButton(context, 'Minuman', 'Minuman'),
           ],
         ),
       ),

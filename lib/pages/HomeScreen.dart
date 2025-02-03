@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:kucing/pages/ImagePage.dart';
 import 'package:stroke_text/stroke_text.dart';
 import 'package:kucing/utils/constants.dart';
+import 'package:kucing/widgets/CustomButton.dart';
+import 'package:kucing/logic/Navigation.dart';
+
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -30,9 +33,19 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20),
             _buildButton(context, 'Ekspresi', 'Ekspresi'),
             SizedBox(height: 20),
-            _buildButton(context, 'Do & Dont', 'Do & Dont'),
+            CustomButton(
+              label: 'Do & Dont',
+              onPressed: () {
+                NavigationLogic.goToMenuPageDoDont(context);
+              },
+            ),
             SizedBox(height: 20),
-            _buildButton(context, 'Makanan & Minuman', 'Makanan & Minuman'),
+            CustomButton(
+              label: 'Makanan & Minuman',
+              onPressed: () {
+                NavigationLogic.goToMenuPageFnB(context);
+              },
+            ),
           ],
         ),
       ),
