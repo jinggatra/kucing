@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class ImageRow extends StatelessWidget {
@@ -5,10 +7,10 @@ class ImageRow extends StatelessWidget {
   final String image2;
 
   const ImageRow({
-    Key? key,
+    super.key,
     required this.image1,
     required this.image2,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class ImageRow extends StatelessWidget {
           width: 100,
           height: 100,
         ),
-        SizedBox(width: 20),
+        const SizedBox(width: 20),
         Image.asset(
           image2,
           width: 100,

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import '../pages/HomeScreen.dart';
 import '../pages/MenuPageDoDont.dart';
@@ -7,14 +9,14 @@ class NavigationLogic {
   static void goToMenuPage(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => HomeScreen()),
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
     );
   }
 
   static void goToMenuPageDoDont(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => DoDontPage()),
+      MaterialPageRoute(builder: (context) => const DoDontPage()),
     );
   }
 

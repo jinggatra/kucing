@@ -1,6 +1,7 @@
+// ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:kucing/pages/ImagePage.dart';
-import 'package:stroke_text/stroke_text.dart';
 import 'package:kucing/utils/constants.dart';
 
 class FnBPage extends StatelessWidget {

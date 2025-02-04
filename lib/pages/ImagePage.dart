@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import '../logic/DataProvider.dart';
 import 'DetailPage.dart';
@@ -5,43 +7,36 @@ import 'DetailPage.dart';
 class ImageSelectionPage extends StatefulWidget {
   final String category;
 
-  const ImageSelectionPage({required this.category, Key? key})
-      : super(key: key);
+  const ImageSelectionPage({required this.category, super.key});
 
   @override
   _ImageSelectionPageState createState() => _ImageSelectionPageState();
 }
 
 class _ImageSelectionPageState extends State<ImageSelectionPage> {
-  late List<Map<String, String>> _data;
+  late final List<Map<String, String>> _data;
 
   @override
   void initState() {
     super.initState();
-    _loadDataByCategory(); // Memuat data berdasarkan kategori
+    _data = _loadDataByCategory();
   }
 
-  void _loadDataByCategory() {
+  List<Map<String, String>> _loadDataByCategory() {
     switch (widget.category) {
       case 'Ekspresi':
-        _data = CatDataProvider.getCatData();
-        break;
+        return CatDataProvider.getCatData();
       case 'Do':
-        _data = DoProvider.getDoData();
-        break;
+        return DoProvider.getDoData();
       case 'Dont':
-        _data = DontProvider.getDontData();
-        break;
+        return DontProvider.getDontData();
       case 'Makanan':
-        _data = FoodProvider.getFoodData();
-        break;
+        return FoodProvider.getFoodData();
       case 'Minuman':
-        _data = WaterProvider.getWaterData();
-        break;
+        return WaterProvider.getWaterData();
       default:
-        _data = [];
+        return [];
     }
-    setState(() {}); // Update UI after data is loaded
   }
 
   @override
@@ -53,71 +48,94 @@ class _ImageSelectionPageState extends State<ImageSelectionPage> {
       ),
       backgroundColor: Colors.orangeAccent.shade700,
       body: _data.isEmpty
-          ? Center(
+          ? const Center(
               child: Text(
                 'Tidak ada data untuk kategori ini.',
                 style: TextStyle(fontSize: 18, color: Colors.grey),
               ),
             )
-          : GridView.builder(
+          : Padding(
               padding: const EdgeInsets.all(16.0),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 0.75, // Menyesuaikan aspek tampilan gambar
+                ),
+                itemCount: _data.length,
+                itemBuilder: (context, index) {
+                  final item = _data[index];
+                  return _ImageCard(
+                    image: item['image']!,
+                    name: item['name']!,
+                    description: item['description']!,
+                  );
+                },
               ),
-              itemCount: _data.length,
-              itemBuilder: (context, index) {
-                final item = _data[index];
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DetailPage(
-                          image: item['image']!,
-                          name: item['name']!,
-                          description: item['description']!,
-                        ),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    elevation: 4,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: Image.asset(
-                              item['image']!,
-                              width: double.infinity,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            item['name']!,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              color: Colors.purple.shade800,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
             ),
+    );
+  }
+}
+
+class _ImageCard extends StatelessWidget {
+  final String image;
+  final String name;
+  final String description;
+
+  const _ImageCard({
+    required this.image,
+    required this.name,
+    required this.description,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailPage(
+              image: image,
+              name: name,
+              description: description,
+            ),
+          ),
+        );
+      },
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        elevation: 4,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: ClipRRect(
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(12)),
+                child: Image.asset(
+                  image,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                name,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.purple.shade800,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

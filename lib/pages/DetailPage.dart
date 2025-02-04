@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
@@ -5,7 +7,7 @@ class DetailPage extends StatelessWidget {
   final String name;
   final String description;
 
-  const DetailPage({
+  const DetailPage({super.key, 
     required this.image,
     required this.name,
     required this.description,
@@ -15,7 +17,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail'),
+        title: const Text('Detail'),
         backgroundColor: Colors.purple.shade600,
       ),
       backgroundColor: Colors.orangeAccent.shade700,
@@ -30,7 +32,7 @@ class DetailPage extends StatelessWidget {
               height: 200,
               fit: BoxFit.cover,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Nama
             Text(
               name,
@@ -40,11 +42,11 @@ class DetailPage extends StatelessWidget {
                 color: Colors.purple.shade800,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             // Deskripsi
             Text(
               description,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.black87,
               ),

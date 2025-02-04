@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:kucing/pages/ImagePage.dart';
 import 'package:stroke_text/stroke_text.dart';
@@ -6,11 +8,13 @@ import 'package:kucing/widgets/CustomButton.dart';
 import 'package:kucing/logic/Navigation.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: const Text('Home Screen'),
         backgroundColor: Colors.purple.shade600,
       ),
       backgroundColor: Colors.orangeAccent.shade700,
@@ -18,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            StrokeText(
+            const StrokeText(
               text: 'MATERI',
               textStyle: TextStyle(
                 fontFamily: 'Bold Condensed',
@@ -29,16 +33,16 @@ class HomeScreen extends StatelessWidget {
               strokeWidth: 2,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildButton(context, 'Ekspresi', 'Ekspresi'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             CustomButton(
               label: 'Do & Dont',
               onPressed: () {
                 NavigationLogic.goToMenuPageDoDont(context);
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             CustomButton(
               label: 'Makanan & Minuman',
               onPressed: () {
@@ -63,14 +67,14 @@ class HomeScreen extends StatelessWidget {
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: AppConstants.secondaryColor,
-        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
       ),
       child: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: AppConstants.buttonFontSize,
           color: AppConstants.primaryColor,
           fontWeight: FontWeight.bold,
