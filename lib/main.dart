@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:kucing/utils/routes.dart';
 
 void main() {
-  debugProfileBuildsEnabled = true; // Melihat rebuild widget
   runApp(const MyApp());
+  debugProfileBuildsEnabled = true;
+
 }
 
 class MyApp extends StatelessWidget {

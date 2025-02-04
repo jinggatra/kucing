@@ -17,14 +17,17 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^3.0.0
 
 flutter_icons:
-  image_path: "assets/images/icon.png" 
   android: true
+  ios: true
+  image_path: "assets/images/flutter_logo.png" # Ganti dengan lokasi ikon Anda
+  adaptive_icon_background: "#ffffff" # Untuk ikon adaptif Android
 
 flutter:
   uses-material-design: true
